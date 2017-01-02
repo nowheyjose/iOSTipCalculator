@@ -56,7 +56,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Total: $0.00 Tip: $0.00">
                                         <attributes>
-                                            <color key="NSColor" red="0.00017872558217513801" green="0.47052061032754766" blue="0.027807182090013937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="27" name="Helvetica-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -70,7 +70,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Total Per Person: $0.00">
                                         <attributes>
-                                            <color key="NSColor" red="0.00017872558217513801" green="0.47052061032754766" blue="0.027807182090013937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="24" name="Helvetica-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -133,7 +133,14 @@
                             <outletCollection property="gestureRecognizers" destination="bOa-gR-lrU" appends="YES" id="9o9-K5-T67"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="Dbi-M9-zG1"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="Dbi-M9-zG1">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="dpD-wl-eFH">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="2o8-NT-l33" kind="show" id="DDE-fN-ZiE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="amtField" destination="aso-hB-rCM" id="XdD-vc-OYI"/>
                         <outlet property="amtPerPersonLabel" destination="4eD-pf-rNX" id="69V-Hv-UjD"/>
@@ -153,6 +160,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1076" y="776.76161919040487"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="st7-OW-qny">
+            <objects>
+                <viewController id="2o8-NT-l33" customClass="SettingsViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O3z-kw-Zgt"/>
+                        <viewControllerLayoutGuide type="bottom" id="OCl-re-AQ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="09A-gY-8qn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3q-dN-0wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kEK-uk-UGb">
